@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,31 +16,45 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="644dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_height="561dp"
+            android:rotationX="-38"
+            app:srcCompat="@drawable/anders" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:padding="10dp"
+            android:text="No bitches??"
+            android:textAlignment="center"
+            android:textSize="34sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/Quiz"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="Take Quiz" />
+                android:text="Take Quiz"
+                android:padding="5dp"/>
 
             <Button
                 android:id="@+id/Next"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:text="Catalog page"
-                android:shadowColor="@color/black"
+                android:padding="5dp"
                 />
+
         </LinearLayout>
 
     </LinearLayout>

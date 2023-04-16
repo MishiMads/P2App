@@ -12,6 +12,16 @@
         android:theme="@style/Theme.P2PlantAPP"
         tools:targetApi="31">
         <activity
+            android:name=".SecondActivity"
+            android:exported="false"
+            android:label="@string/title_activity_second"
+            android:theme="@style/Theme.P2PlantAPP" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/Theme.P2PlantAPP" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

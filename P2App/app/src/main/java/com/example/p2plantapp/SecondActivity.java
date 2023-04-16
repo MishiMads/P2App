@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private Button prev;
+    private Button Front;
 
 
 
@@ -20,8 +20,8 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        prev = (Button) findViewById(R.id.Prev);
-        prev.setOnClickListener(new View.OnClickListener() {
+        Front = (Button) findViewById(R.id.FrontPage);
+        Front.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("Buttons","To page 3!");

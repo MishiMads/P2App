@@ -9,7 +9,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-<<<<<<< Updated upstream
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,9 +58,4 @@
         </LinearLayout>
 
     </LinearLayout>
-=======
-        tools:layout="@layout/fragment_second"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="16dp" />
->>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

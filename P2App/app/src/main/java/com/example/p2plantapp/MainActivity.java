@@ -7,6 +7,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 
@@ -23,11 +24,27 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Button Next;
+    Button camera;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        camera = (Button)findViewById(R.id.Quiz);
+        camera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    Intent intent = new Intent();
+                    intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivity(intent);
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
+
+            }
+        });
 
         Next = (Button) findViewById(R.id.Next);
 

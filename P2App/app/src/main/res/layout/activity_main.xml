@@ -18,7 +18,7 @@
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="match_parent"
-            android:layout_height="561dp"
+            android:layout_height="264dp"
             android:rotationX="-38"
             app:srcCompat="@drawable/anders" />
 
@@ -42,8 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="Take Quiz"
-                android:padding="5dp"/>
+                android:padding="5dp"
+                android:text="Take Quiz" />
 
             <Button
                 android:id="@+id/Next"

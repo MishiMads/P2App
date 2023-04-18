@@ -26,7 +26,7 @@ public class SecondActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d("Buttons","To page 3!");
                 Openpage2();
-                Toast.makeText(SecondActivity.this, "Loading page 3",Toast.LENGTH_SHORT).show();
+                Toast.makeText(SecondActivity.this, "Loading Frontpage",Toast.LENGTH_SHORT).show();
 
 
             }

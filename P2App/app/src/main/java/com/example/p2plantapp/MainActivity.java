@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Openpage2();
                 Log.d("Buttons","To page 2!");
-                Toast.makeText(MainActivity.this, "Loading page 2",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Loading Catalog",Toast.LENGTH_SHORT).show();
 
             }
         });

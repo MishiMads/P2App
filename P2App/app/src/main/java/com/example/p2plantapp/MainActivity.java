@@ -1,5 +1,8 @@
 package com.example.p2plantapp;
 
+import com.example.p2plantapp.Birds;
+import static com.example.p2plantapp.Birds.addBird;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -19,10 +22,13 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
+
     private Button Next;
     Button camera;
     ImageView ImageDisplay;
     public static final int CAMERA_ACTION_CODE =1;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         camera = (Button)findViewById(R.id.Quiz);
         ImageDisplay = findViewById(R.id.TestImage);
+
+
 
         camera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,9 +95,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundle = data.getExtras();
             Bitmap finalPhoto = (Bitmap) bundle.get("data");
             ImageDisplay.setImageBitmap(finalPhoto);
-
-
-
+            addBird( "input",finalPhoto);
         }
     }
 

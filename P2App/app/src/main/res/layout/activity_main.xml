@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/TestImage"
             android:layout_width="match_parent"
             android:layout_height="264dp"
             android:rotationX="-38"

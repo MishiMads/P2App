@@ -11,15 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.P2PlantAPP"
         tools:targetApi="31">
+        <activity
+            android:name=".Search"
+            android:exported="false" />
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="$com.example.p2plantapp.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
-            android:name="android.support.FILE_PROVIDER_PATHS"
-            android:resource="@xml/provider_paths" />
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
         </provider>
+
         <activity
             android:name=".Itempage"
             android:exported="false" />

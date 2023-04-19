@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
                /* try{
                     Intent intent = new Intent();
-                    intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
+                    intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE); 
                     startActivity(intent);
 
                 }
@@ -55,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 */
 
             }
+
         });
+        
 
 
 
@@ -72,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
     public void Openpage2(){
         Intent Open = new Intent(this, SecondActivity.class);
         startActivity(Open);

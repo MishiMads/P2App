@@ -83,6 +83,9 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundle = data.getExtras();
             Bitmap finalPhoto = (Bitmap) bundle.get("data");
             ImageDisplay.setImageBitmap(finalPhoto);
+
+
+
         }
     }
 

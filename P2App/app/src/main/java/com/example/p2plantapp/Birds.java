@@ -3,10 +3,8 @@ import android.graphics.Bitmap;
 import java.util.HashMap;
 
 public class Birds {
-
     //Hashmap for the collection of pictures including their user-inputted names.
     private static HashMap<String, Bitmap> birdMap = new HashMap<>();
-
     //A hashmap is created with the variable name birdMap
     //with String as its key and Bitmap as its value.
     //The birdMap Hashmap is a private static, meaning it can only be accessed

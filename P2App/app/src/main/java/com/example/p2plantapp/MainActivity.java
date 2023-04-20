@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         camera = (Button)findViewById(R.id.PicBut);
         ImageDisplay = findViewById(R.id.Image1);
-        ImageView imageView = Itempage.NamePicture;
+
 
         catalog = new HashMap<>();
         catalog.put("image1", BitmapFactory.decodeResource(getResources(), R.drawable.anders));

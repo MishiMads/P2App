@@ -2,9 +2,13 @@ package com.example.p2plantapp;
 import android.graphics.Bitmap;
 import java.util.HashMap;
 
-public class Birds { //Hashmap for the collection of pictures including their user-inputted names.
-    private static HashMap<String, Bitmap> birdMap = new HashMap<>(); //A hashmap is created
-    //with the name birdMap with String as its key and Bitmap as its value.
+public class Birds {
+
+    //Hashmap for the collection of pictures including their user-inputted names.
+    private static HashMap<String, Bitmap> birdMap = new HashMap<>();
+
+    //A hashmap is created with the variable name birdMap
+    //with String as its key and Bitmap as its value.
     //The birdMap Hashmap is a private static, meaning it can only be accessed
     //by the methods of this specific class and no other classes.
         //Private: only methods of the same class can access this member.
@@ -13,11 +17,12 @@ public class Birds { //Hashmap for the collection of pictures including their us
 
     public static void addBird(String key, Bitmap bitmap) {
         birdMap.put(key, bitmap);
-    } //A method
-    //called "addBird" which takes two arguments: a String and Bitmap and assigned them to
-    //"key" and "bitmap" respectively. In the code block, the .put() method in the hashmap class
-    //is used to take the values from the method arguments
-    //and add them as an element in the birdMap hashmap.
+    }
+    //A method with the selector "addBird" that has two parameters: a String and a Bitmap variable.
+    //When implemented, it takes the String and Bitmap arguments and assigns them to the "key" and
+    //"bitmap" variables.
+    //In the code block, the .put() method in the hashmap class is used to take the values from
+    //the method parameters and add them as a key-value pair entry in the birdMap hashmap.
     //This method is public and static with a return type of void:
         //Public: accessible from anywhere in the program.
             //They can be accessed by objects of the class, as well as objects of other classes
@@ -27,6 +32,7 @@ public class Birds { //Hashmap for the collection of pictures including their us
 
     public static Bitmap getBird(String key) {
         return birdMap.get(key);
-    } //WIP...
+    }
+    //WIP...
 
 }

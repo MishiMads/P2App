@@ -10,6 +10,7 @@ public class Birds { //Hashmap for the collection of pictures including their us
         //Private: only methods of the same class can access this member.
         //Static: only one instance of this hashmap exists across all instances of the Birds class.
             //I.e multiple instances of the Birds class share the same (this) hashmap named birdMap.
+
     public static void addBird(String key, Bitmap bitmap) {
         birdMap.put(key, bitmap);
     } //A method

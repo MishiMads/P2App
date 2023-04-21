@@ -148,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
             LinearLayout catalogLayout = findViewById(R.id.catalog_layout);
             ImageView imageView = new ImageView(this);
             imageView.setImageBitmap(birdImage);
+            imageView.setMinimumHeight(500);
+            imageView.setMinimumWidth(500);
             catalogLayout.addView(imageView);
 
             

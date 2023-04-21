@@ -32,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
     Button camera;
     ImageView ImageDisplay;
     public static final int CAMERA_ACTION_CODE =1;
+
+    //Declaring a value "final" means that the value becomes immutable and constant, which means
+    //that the value cannot be changed after being initialized.
+    //The "final" keyword also applies to methods and classes.
+        //Final methods cannot be overriden by a subclass.
+        //Final classes cannot be subclassed.
+
     private Bitmap finalPhoto;
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -58,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
 
         Button takePictureButton = findViewById(R.id.PicBut);
         takePictureButton.setOnClickListener(new View.OnClickListener() {
+
+            //OnClickListener() is an event.
+            //An event triggers the software program to respond or behave in a specific way.
+
             @Override
             public void onClick(View view) {
                 dispatchTakePictureIntent();
@@ -65,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
 
             private void dispatchTakePictureIntent() {
                 Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                //The "intent" keyword is a messaging object used to communicate between
+                //components such as activities, services and broadcast receivers.
+
                 if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
                 }

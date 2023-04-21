@@ -20,9 +20,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import java.util.HashMap;
+import android.widget.LinearLayout.LayoutParams;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button Next;
     Button camera;
-    ImageView ImageDisplay;
+
     public static final int CAMERA_ACTION_CODE =1;
 
     //Declaring a value "final" means that the value becomes immutable and constant, which means
@@ -43,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private HashMap<String, Bitmap> catalog;
+    private Bitmap test1;
+    private Bitmap test2;
+    private Bitmap test3;
+    private Bitmap test4;
+    private Bitmap test5;
+    private Bitmap test6;
 
 
 
@@ -52,18 +60,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         camera = (Button)findViewById(R.id.PicBut);
-        ImageDisplay = findViewById(R.id.Image1);
 
+        Log.i("mytag", "onCreate: function ");
 
         catalog = new HashMap<>();
-        catalog.put("image1", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        catalog.put("image2", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        catalog.put("image3", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        catalog.put("image4", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        catalog.put("image5", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        catalog.put("image6", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
+        //test1 = catalog.put("image1", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
+        //test2 = catalog.put("image2", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
+        //test3 = catalog.put("image3", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
+        //test4 = catalog.put("image4", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
+        //test5 = catalog.put("image5", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
+        //test6 = catalog.put("image6", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
 
         Button takePictureButton = findViewById(R.id.PicBut);
+
+        LinearLayout catalogLayout = findViewById(R.id.catalog_layout);
+        for (String name : catalog.keySet()) {
+            Log.d("myTag", "Forloop");
+            Bitmap image = catalog.get(name);
+            ImageView imageView = new ImageView(this);
+            imageView.setImageBitmap(image);
+            catalogLayout.addView(imageView);
+            Log.d("myTag", "Forloop ended");
+        }
         takePictureButton.setOnClickListener(new View.OnClickListener() {
 
             //OnClickListener() is an event.
@@ -85,47 +103,25 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
         camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                Log.d(TAG, "Catalog.put not working?");
+                Log.d("myTag", "Camera opens");
                 if (intent.resolveActivity(getPackageManager()) !=null){
                     startActivityForResult(intent, CAMERA_ACTION_CODE);
-                    Log.i(TAG, "onClick: aksjd");
+                    Log.i("myTag", "if function in camera");
                 }
                 else {
                     Toast.makeText(MainActivity.this, "how the fuck do you not have a camera", Toast.LENGTH_SHORT).show();
                 }
-
-               /* try{
-                    Intent intent = new Intent();
-                    intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE); 
-                    startActivity(intent);
-
-                }
-                catch(Exception e){
-                    e.printStackTrace();
-                }
-
-                */
-
             }
-
         });
-        
-
-
-
-       Next = (Button) findViewById(R.id.Next);
-
-
+        Next = (Button) findViewById(R.id.Next);
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("Buttons","To page 2!");
+                Log.d("myTag","button click");
                 Toast.makeText(MainActivity.this, "Loading Catalog",Toast.LENGTH_SHORT).show();
             }
         });
@@ -144,19 +140,37 @@ public class MainActivity extends AppCompatActivity {
             Bundle bundle = data.getExtras();
             Bitmap birdImage = (Bitmap) bundle.get("data");
 
+            Log.d("myTag", "bitmaps");
 
+            String name = "image" + (catalog.size() + 1);
+            Log.d("myTag", "+1 size");
+            catalog.put(name, birdImage);
+            LinearLayout catalogLayout = findViewById(R.id.catalog_layout);
+            ImageView imageView = new ImageView(this);
+            imageView.setImageBitmap(birdImage);
+            catalogLayout.addView(imageView);
+
+            
+
+            Log.d("myTag", "added bitmap to cataloglayout");
+
+            Log.d("myTag", "alertdialog created");
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Enter a name for the bird");
             final EditText input = new EditText(this);
             builder.setView(input);
-            Log.d(TAG, "Picture taken");
+
+
+
+
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
+                    Log.d("myTag", "ok button to name");
                     String birdName = input.getText().toString();
                     // Add the bird picture to the catalog with the entered name
                     catalog.put(birdName, birdImage);
-                    Log.d(TAG, "Catalog.put not working?");
+                    Log.d("myTag", "onclick name ended");
                 }
             });
             builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -169,6 +183,5 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "Code finish");
         }
     }
-
 }
 

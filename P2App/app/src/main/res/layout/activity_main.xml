@@ -29,45 +29,9 @@
                     android:layout_height="wrap_content">
 
                     <TableRow
+                        android:id="@+id/catalog_layout"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <ImageView
-                            android:id="@+id/Image1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/apple" />
-
-                        <ImageView
-                            android:id="@+id/Image2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/apple" />
-
-                        <ImageView
-                            android:id="@+id/Image3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/apple" />
-
-                        <ImageView
-                            android:id="@+id/Image4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/apple" />
-
-                        <ImageView
-                            android:id="@+id/Image5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/apple" />
-
-                        <ImageView
-                            android:id="@+id/Image6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/apple" />
-                    </TableRow>
+                        android:layout_height="match_parent"/>
 
                 </TableLayout>
             </LinearLayout>

@@ -40,7 +40,6 @@ public class SecondActivity extends AppCompatActivity {
                 Toast.makeText(SecondActivity.this, "Loading Frontpage",Toast.LENGTH_SHORT).show();
             }
         });
-        IP = (ImageButton) findViewById(R.id.Image1);
         IP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

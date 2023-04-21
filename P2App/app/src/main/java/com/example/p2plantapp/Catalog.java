@@ -113,7 +113,7 @@ public class Catalog extends AppCompatActivity {
                     Log.i("myTag", "if function in camera");
                 }
                 else {
-                    Toast.makeText(Catalog.this, "how the fuck do you not have a camera", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Catalog.this, "No camera found", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -124,7 +124,6 @@ public class Catalog extends AppCompatActivity {
                 Log.d("myTag","button click");
                 Intent intent = new Intent(Catalog.this, Search.class);
                 startActivity(intent);
-                // Toast.makeText(MainActivity.this, "Loading Catalog",Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -146,8 +145,8 @@ public class Catalog extends AppCompatActivity {
             LinearLayout catalogLayout = findViewById(R.id.catalog_layout);
             ImageView imageView = new ImageView(this);
             imageView.setImageBitmap(birdImage);
-            imageView.setMinimumHeight(500);
-            imageView.setMinimumWidth(500);
+            imageView.setMinimumHeight(700);
+            imageView.setMinimumWidth(700);
             catalogLayout.addView(imageView);
 
 

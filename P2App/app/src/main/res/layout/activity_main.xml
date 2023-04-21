@@ -13,8 +13,30 @@
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.518" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="416dp"
+        android:layout_height="473dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
+        app:srcCompat="@drawable/forside" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press the start button to begin your bird capturing journey"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Launch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        android:padding="10dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -122,7 +122,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("myTag","button click");
-                Toast.makeText(MainActivity.this, "Loading Catalog",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, Search.class);
+                startActivity(intent);
+                // Toast.makeText(MainActivity.this, "Loading Catalog",Toast.LENGTH_SHORT).show();
+                
             }
         });
     }

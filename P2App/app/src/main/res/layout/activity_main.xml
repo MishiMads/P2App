@@ -67,7 +67,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:padding="5dp"
-            android:text="Catalog page" />
+            android:text="Search page" />
 
     </LinearLayout>
 

@@ -54,8 +54,8 @@ public class Catalog extends AppCompatActivity {
         Log.i("mytag", "onCreate: function ");
 
         catalog = new HashMap<>();
-        
-        Button takePictureButton = findViewById(R.id.PicBut);
+
+
 
         LinearLayout catalogLayout = findViewById(R.id.catalog_layout);
         for (String name : catalog.keySet()) {
@@ -66,6 +66,8 @@ public class Catalog extends AppCompatActivity {
             catalogLayout.addView(imageView);
             Log.d("myTag", "Forloop ended");
         }
+        
+        Button takePictureButton = findViewById(R.id.PicBut);
         takePictureButton.setOnClickListener(new View.OnClickListener() {
 
             //OnClickListener() is an event.

@@ -101,30 +101,9 @@ public class Catalog extends AppCompatActivity {
                 if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
                     startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
                 }
-            }
-        });
-        camera.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                Log.d("myTag", "Camera opens");
-                if (intent.resolveActivity(getPackageManager()) !=null){
-                    startActivityForResult(intent, CAMERA_ACTION_CODE);
-                    Log.i("myTag", "if function in camera");
-                }
                 else {
                     Toast.makeText(Catalog.this, "No camera found", Toast.LENGTH_SHORT).show();
                 }
-            }
-        });
-        Next = (Button) findViewById(R.id.Next);
-        Next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.d("myTag","button click");
-                Intent intent = new Intent(Catalog.this, Search.class);
-                startActivity(intent);
-
             }
         });
     }

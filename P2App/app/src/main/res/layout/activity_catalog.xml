@@ -25,14 +25,6 @@
             android:layout_weight="1"
             android:text="Take picture" />
 
-        <Button
-            android:id="@+id/Next"
-            android:layout_width="172dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:layout_weight="1"
-            android:text="Search page" />
-
     </LinearLayout>
 
     <LinearLayout

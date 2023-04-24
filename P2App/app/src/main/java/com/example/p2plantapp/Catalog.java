@@ -66,7 +66,7 @@ public class Catalog extends AppCompatActivity {
             catalogLayout.addView(imageView);
             Log.d("myTag", "Forloop ended");
         }
-        
+
         Button takePictureButton = findViewById(R.id.PicBut);
         takePictureButton.setOnClickListener(new View.OnClickListener() {
 

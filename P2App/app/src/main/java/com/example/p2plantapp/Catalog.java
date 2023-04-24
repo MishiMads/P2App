@@ -28,9 +28,6 @@ import android.widget.LinearLayout.LayoutParams;
 
 public class Catalog extends AppCompatActivity {
 
-
-
-    private Button Next;
     Button camera;
 
     public static final int CAMERA_ACTION_CODE =1;
@@ -41,16 +38,9 @@ public class Catalog extends AppCompatActivity {
     //Final methods cannot be overriden by a subclass.
     //Final classes cannot be subclassed.
 
-    private Bitmap finalPhoto;
-
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private HashMap<String, Bitmap> catalog;
-    private Bitmap test1;
-    private Bitmap test2;
-    private Bitmap test3;
-    private Bitmap test4;
-    private Bitmap test5;
-    private Bitmap test6;
+
 
 
 
@@ -64,13 +54,7 @@ public class Catalog extends AppCompatActivity {
         Log.i("mytag", "onCreate: function ");
 
         catalog = new HashMap<>();
-        //test1 = catalog.put("image1", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        //test2 = catalog.put("image2", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        //test3 = catalog.put("image3", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        //test4 = catalog.put("image4", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        //test5 = catalog.put("image5", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-        //test6 = catalog.put("image6", BitmapFactory.decodeResource(getResources(), R.drawable.anders));
-
+        
         Button takePictureButton = findViewById(R.id.PicBut);
 
         LinearLayout catalogLayout = findViewById(R.id.catalog_layout);
